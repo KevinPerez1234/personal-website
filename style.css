@@ -45,13 +45,15 @@ body {
     display: flex; 
     justify-content: space-between;
     align-items: center;
-    padding: 2px 10px; /* Adjusted padding to minimize gap */
+    padding: 0px 10px; /* Adjusted padding to minimize gap */
     color: #F5F5F5; 
     background-color: #6A7F5B; 
     position: fixed; /* Fixed position for the header */
-    width: 100%; /* Full width */
+    width: 100vw; /* Full width */
     z-index: 1000; /* Ensures the header stays above other elements */
     margin-top: 0;
+    box-sizing: border-box; /* Include padding in width calculation */
+
 }
 
 .home-content .profile-pic {
