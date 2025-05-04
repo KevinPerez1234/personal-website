@@ -22,6 +22,7 @@ Skills: A grid showcasing my technical skills with progress bars.
 Contact: A section with contact information and a form to reach out.
 
 Instructions for Navigating the Website
+
 Landing on the Home Page:
 Upon visiting the site, you’ll arrive at the Home section, featuring a profile picture, a typing animation with my name, and a short bio. Scroll down or click the navigation links to explore further.
 
