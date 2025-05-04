@@ -274,6 +274,22 @@ body {
     filter: brightness(0.5) saturate(0.5) blur(2px); /* Apply blur and dimming effect */
 }
 
+/* Mobile adjustments for Interests Section */
+@media (max-width: 768px) {
+    .interest img {
+        width: 120px; /* Reduce image size for mobile */
+        height: 120px;
+    }
+
+    .interest .label {
+        font-size: 0.8rem; /* Reduce label font size for mobile */
+        top: 50%; /* Adjust position to stay centered */
+        left: 50%;
+        transform: translate(-50%, -50%); /* Ensure proper centering */
+        white-space: nowrap; /* Prevent text from wrapping */
+    }
+}
+
 /* Mobile adjustments for About Section */
 @media (max-width: 768px) {
     .about-body {
