@@ -40,7 +40,7 @@ html {
     margin-top: 20px; /* Space above the image */
 }
 
-/* Mobile adjustments */
+/* Mobile General adjustments */
 @media (max-width: 480px) {
     .home-content .profile-pic {
         width: 30px; /* Even smaller on mobile */
@@ -49,6 +49,22 @@ html {
 
     .header-container {
         gap: 0.3rem; /* Further reduce gap on mobile */
+    }
+}
+
+@media (max-width: 768px) {
+    h1, h2 {
+        font-size: 1.5rem; /* Adjust heading sizes */
+    }
+
+    p {
+        font-size: 1rem; /* Adjust paragraph font size */
+        line-height: 1.5; /* Improve readability */
+    }
+
+    .btn {
+        font-size: 1rem; /* Adjust button font size */
+        padding: 10px 20px; /* Adjust button padding */
     }
 }
 
@@ -261,6 +277,19 @@ html {
     gap: 20px;
 }
 
+@media (max-width: 768px) {
+    .navbar ul {
+        display: flex;
+        flex-direction: column; /* Stack links vertically */
+        align-items: center;
+        gap: 10px; /* Add spacing between links */
+    }
+
+    .navbar ul li a {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+}
+
 .navbar ul li {
     display: inline;
     gap: 20px;
@@ -395,6 +424,24 @@ body {
     text-align: justify;
   }
 
+  @media (max-width: 768px) {
+    .about-body {
+        flex-direction: column; /* Stack image and text vertically */
+        align-items: center; /* Center align the content */
+        text-align: center; /* Center align the text */
+    }
+
+    .about-pic {
+        width: 80%; /* Reduce image width */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 20px; /* Add spacing below the image */
+    }
+
+    .text-container {
+        padding: 0 10px; /* Add padding for better readability */
+    }
+}
+
 .interests{
 display: flex;
 position: relative;
@@ -430,6 +477,27 @@ justify-content: left;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 30px;
     justify-items: center;
+}
+
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr; /* Make skill cards full-width */
+        gap: 20px; /* Add spacing between cards */
+    }
+
+    .skill-card {
+        max-width: 90%; /* Reduce card width */
+        margin: 0 auto; /* Center the cards */
+    }
+
+    .overall-progress-bar {
+        width: 90%; /* Adjust progress bar width */
+        margin: 20px auto; /* Center the progress bar */
+    }
+
+    .progress-percentage {
+        font-size: 1rem; /* Adjust font size for percentage text */
+    }
 }
 
 .skill-card {
@@ -793,4 +861,11 @@ footer .logo {
     margin-left: 5px;
     font-family: 'Montserrat', sans-serif;
     color: #FFFDD0; 
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding: 15px 10px; /* Add padding for better spacing */
+        font-size: 0.8rem; /* Adjust font size */
+    }
 }
