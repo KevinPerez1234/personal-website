@@ -246,16 +246,17 @@ body {
 /* Style for the labels */
 .interest .label {
     position: absolute;
-    top: 55%; /* Adjusted to move the label slightly down */
+    top: 50%; /* Center vertically */
     left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Adjust for perfect centering */
+    transform: translate(-50%, -50%); /* Ensure perfect centering */
     color: #f5f5f5; /* Off-white color */
-    font-family: 'Poppins', sans-serif; /* Inherit font from surrounding text */
+    font-family: 'Poppins', sans-serif;
     font-size: 1rem;
     text-align: center;
     transition: opacity 0.3s ease; /* Smooth fade-out effect */
     opacity: 1; /* Fully visible by default */
     pointer-events: none; /* Prevent the label from blocking hover events */
+    white-space: nowrap; /* Prevent text wrapping */
 }
 
 /* Hide the label on hover */
@@ -283,10 +284,13 @@ body {
 
     .interest .label {
         font-size: 0.8rem; /* Reduce label font size for mobile */
-        top: 50%; /* Adjust position to stay centered */
-        left: 50%;
+        top: 50%; /* Keep label centered vertically */
+        left: 50%; /* Keep label centered horizontally */
         transform: translate(-50%, -50%); /* Ensure proper centering */
-        white-space: nowrap; /* Prevent text from wrapping */
+        white-space: nowrap; /* Prevent text wrapping */
+        max-width: 100%; /* Ensure the label fits within the image */
+        overflow: hidden; /* Hide any overflowing text */
+        text-overflow: ellipsis; /* Add ellipsis if text overflows */
     }
 }
 
