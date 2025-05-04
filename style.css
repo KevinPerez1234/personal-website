@@ -9,6 +9,10 @@ html {
     scroll-behavior: smooth; /* Enables smooth scrolling */
 }
 
+body {
+    overflow-x: hidden; /* Prevent horizontal scrolling for the entire page */
+}
+
 /* Header Container (for h1 and profile picture) */
 .header-container {
     display: flex; /* Align h1 and img horizontally */
@@ -80,7 +84,15 @@ html {
 
     .btn {
         font-size: 1rem; /* Adjust button font size */
-        padding: 10px 20px; /* Adjust button padding */
+        padding: 10px 20px; /* Adjust button padding */   
+    }
+
+    .container {
+        padding: 0 15px; /* Add padding to prevent content cut-off */
+    }
+
+    .home-content, .skills-content, .contact-content {
+        padding: 0 15px; /* Add padding for better spacing */
     }
 }
 
@@ -278,6 +290,19 @@ html {
     }
 }
 
+@media (max-width: 768px) {
+    .text-container {
+        padding: 0 15px; /* Add padding to prevent text cut-off */
+        text-align: justify; /* Ensure text is justified */
+    }
+
+    .about-content h1 {
+        text-align: center; /* Center the "About Me" header */
+        font-size: 1.8rem; /* Adjust font size for mobile */
+        margin-bottom: 20px; /* Add spacing below the header */
+    }
+}
+
 .header {
     display: flex; 
     justify-content: space-between;
@@ -302,16 +327,20 @@ html {
 @media (max-width: 768px) {
     .navbar ul {
         display: flex;
-        flex-direction: column; /* Stack links vertically */
-        align-items: center;
-        gap: 10px; /* Add spacing between links */
+        flex-wrap: nowrap; /* Prevent wrapping */
+        justify-content: space-around; /* Space out links evenly */
+        gap: 0; /* Remove extra gap */
+    }
+
+    .navbar ul li {
+        display: inline-block; /* Ensure links stay inline */
     }
 
     .navbar ul li a {
-        font-size: 1rem; /* Adjust font size for smaller screens */
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
+        padding: 5px 10px; /* Add padding for better spacing */
     }
 }
-
 .navbar ul li {
     display: inline;
     gap: 20px;
@@ -885,11 +914,14 @@ footer {
     background: #6A7F5B; 
     color: #FFFDD0; 
     text-align: center;
-    padding: 10px 10px;
+    padding: 15px 0; 
     font-family: 'Poppins', sans-serif;
     font-size: 0.9rem;
     position: relative;
     z-index: 1;
+    width: 100%; /* Ensure the footer spans the full width */
+    overflow-x: hidden;
+    box-sizing: border-box; /* Include padding in width calculation */
 }
 
 footer p {
