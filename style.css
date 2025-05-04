@@ -54,9 +54,9 @@ html {
 
 
 .social-links {
-    display: flex;               /* Arrange icons in a row */
-    justify-content: center;     /* Center the icons horizontally */
-    gap: 15px;                   /* Space between icons */
+    display: flex; /* Arrange icons in a row */
+    justify-content: center; /* Center the icons horizontally */
+    gap: 15px;  /* Space between icons */
     margin-top: 20px;
   }
   
@@ -85,6 +85,10 @@ html {
 
 .about-content h1 {
     text-align: left;
+    font-size: 1.5rem; /* Larger heading */ 
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    padding-left: 85px;
 }
 
 /* About Section */
@@ -315,7 +319,6 @@ body {
     z-index: 0; /* Lower than the shapes' z-index */
 }
 
-
 .home-content {
     max-width: 800px;
     padding: 0 1.5rem; /* Responsive padding */
@@ -400,35 +403,91 @@ justify-content: left;
 } 
 
 #skills {
-background: transparent; /* Ensure the background is transparent */
-position: relative; /* Ensure proper stacking context */
-z-index: 0; /* Lower than the shapes' z-index */
+    padding: 50px 20px;
+    background: transparent; /* Transparent to show background shapes */
+    text-align: center;
+    position: relative;
+    z-index: 0;
 }
 
-
-  .skills-content { 
-    padding-top: 55px;
+.skills-content {
+    padding-top: 70px;
     margin-bottom: 50px;
     margin-right: 50px;
     margin-left: 50px;
-    text-align: justify;
   }
-  
 
- .skills-content ul li {
-    display: inline-block;
-    margin: 0 10px; /* Space between skills */
-    padding: 5px 10px; /* Padding for better click area */
+.skills-content h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 2rem;
 }
 
-  .contact-content { 
-    padding-top: 55px;
-    margin-bottom: 50px;
-    margin-right: 50px;
-    margin-left: 50px;
-    text-align: justify;
-  }
-  
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+.skill-card {
+    background: #6A7F5B; /* Moss green */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 250px;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    color: #FFFDD0; /* Beige text and icons */
+}
+
+.skill-card i {
+    font-size: 2.5rem; /* Larger icons */
+    margin-bottom: 15px;
+}
+
+.skill-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px); /* Lift the card slightly */
+    background: #FFFDD0; /* Off-white background */
+    color: #6A7F5B; /* Moss green text and icons */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+.overall-progress-bar {
+    background: lightgrey; /* Light gray background for the progress bar */
+    border-radius: 10px;
+    height: 25px;
+    overflow: hidden;
+    margin-top: 30px;
+    width: 80%; /* Adjust width as needed */
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.overall-progress {
+    background: #6A7F5B; /* Moss green */
+    height: 100%;
+    border-radius: 10px;
+    width: 0; /* Start with no progress */
+    transition: width 0.5s ease-in-out; /* Smooth animation for progress */
+}
+
+.progress-percentage {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #333; /* Match the text color with the design */
+    margin-top: 10px;
+}
 
   /* Contact Section */
 #contact {
@@ -445,6 +504,14 @@ z-index: 0; /* Lower than the shapes' z-index */
     position: relative; /* For background shapes */
     z-index: 0;
 }
+
+.contact-content { 
+    padding-top: 55px;
+    margin-bottom: 50px;
+    margin-right: 50px;
+    margin-left: 50px;
+    text-align: justify;
+  }
 
 .contact-content {
     text-align: center; /* Center-align the text */
@@ -588,8 +655,8 @@ z-index: 0; /* Lower than the shapes' z-index */
     position: fixed; /* Fixed position so shapes stay in place */
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100vw; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
     z-index: -1; /* Place behind all content */
     pointer-events: none; /* Prevent interaction with the shapes */
     overflow: hidden; /* Prevent shapes from overflowing the viewport */
@@ -702,4 +769,28 @@ z-index: 0; /* Lower than the shapes' z-index */
     100% {
         transform: translate(0, 0) scale(1);
     }
+}
+
+/* Footer */
+footer {
+    background: #6A7F5B; 
+    color: #FFFDD0; 
+    text-align: center;
+    padding: 10px 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    position: relative;
+    z-index: 1;
+}
+
+footer p {
+    margin: 0; /* Remove any default margin */
+    display: inline; /* Ensure the text flows inline */
+}
+
+
+footer .logo {
+    margin-left: 5px;
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFDD0; 
 }

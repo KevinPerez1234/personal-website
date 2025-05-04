@@ -98,21 +98,38 @@
     <!-- Skills Section -->
     <section id="skills">
         <div class="skills-content">
-            <h2>Skills</h2>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Java</li>
-                <li>Networking</li>
-            </ul>
+            <h1>My Skills</h1>
+            <div class="skills-grid">
+                <div class="skill-card" data-progress="90">
+                    <i class="bi bi-code-slash"></i>
+                    <h3>HTML</h3>
+                </div>
+                <div class="skill-card" data-progress="85">
+                    <i class="bi bi-file-code"></i>
+                    <h3>CSS</h3>
+                </div>
+                <div class="skill-card" data-progress="75">
+                    <i class="bi bi-terminal"></i>
+                    <h3>JavaScript</h3>
+                </div>
+                <div class="skill-card" data-progress="70">
+                    <i class="bi bi-database"></i>
+                    <h3>SQL</h3>
+                </div>
+            </div>
+            <div class="overall-progress-bar">
+                <div class="overall-progress"></div>
+            </div>
+            <p class="progress-percentage">0%</p> <!-- Percentage -->
         </div>
+    </section>
 
     </section>
 
     <!-- Contact Section -->
     <section id="contact">
         <div class="contact-content">
-            <h1>Reach out to me!</h1>
+            <h1>Reach Out to Me</h1>
             <p><span class="typewriter">Message me anytime!</span></p>
             <div class="contact-info">
                 <p>Contact Number: 09620587686</p>
@@ -127,7 +144,37 @@
             </form>
         </div>
     </section>
+    
+</section>
 
-    </section>
+<script>
+ const skillCards = document.querySelectorAll('.skill-card');
+const progressBar = document.querySelector('.overall-progress');
+const progressPercentage = document.querySelector('.progress-percentage'); // Select the percentage element
+
+skillCards.forEach(card => {
+    card.addEventListener('click', () => {
+        // Get the progress value from the data-progress attribute
+        const progress = card.getAttribute('data-progress');
+
+        // Update the width of the progress bar
+        progressBar.style.width = `${progress}%`;
+
+        // Update the percentage text
+        progressPercentage.textContent = `${progress}%`;
+
+        // Optionally, add a temporary class for animation (if needed)
+        progressBar.classList.add('animate-progress');
+        setTimeout(() => {
+            progressBar.classList.remove('animate-progress');
+        }, 500); // Match the transition duration
+    });
+});
+</script>
+
+<footer>
+<p>&copy; 2025<span class="logo">Beben's Corner</span>. All rights reserved.</p>
+</footer>
+
 </body>
 </html> 
