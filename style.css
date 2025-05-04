@@ -41,18 +41,34 @@ html {
 }
 
 /* Mobile General adjustments */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .home-content .profile-pic {
-        width: 30px; /* Even smaller on mobile */
-        height: 30px;
+        width: 100px; /* Reduce image size */
+        height: 100px;
+        margin-top: 10px;
     }
 
-    .header-container {
-        gap: 0.3rem; /* Further reduce gap on mobile */
+    .home-content h1 {
+        font-size: 1.8rem; /* Adjust heading size */
+    }
+
+    .home-content p {
+        font-size: 1rem; /* Adjust paragraph size */
+        text-align: center; /* Center-align text */
+    }
+
+    .social-links {
+        justify-content: center; /* Center social icons */
+        gap: 15px; /* Add spacing between icons */
     }
 }
-
 @media (max-width: 768px) {
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+
     h1, h2 {
         font-size: 1.5rem; /* Adjust heading sizes */
     }
@@ -67,7 +83,6 @@ html {
         padding: 10px 20px; /* Adjust button padding */
     }
 }
-
 
 .social-links {
     display: flex; /* Arrange icons in a row */
@@ -231,10 +246,17 @@ html {
 }
 
 /* Mobile adjustments for About Section */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .about-body {
-        flex-direction: column; 
-        align-items: center; 
+        flex-direction: column; /* Stack image and text vertically */
+        align-items: center; /* Center-align content */
+        text-align: center; /* Center-align text */
+    }
+    
+    .about-pic {
+        width: 80%; /* Reduce image width */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 20px; /* Add spacing below the image */
     }
 
     .about-content .about-pic {
@@ -243,8 +265,8 @@ html {
         margin-bottom: 20px;
     }
 
-    .text-container p {
-        font-size: 1rem;
+    .text-container {
+        padding: 0 15px; /* Add padding for better readability */
     }
 
     .interests-section h3 {
@@ -587,6 +609,25 @@ justify-content: left;
     max-width: 800px; /* Optional: Limit the width for better readability */
 }
 
+@media (max-width: 768px) {
+    .contact-content {
+        text-align: center; /* Center-align the text */
+        margin: 0 auto; /* Center the content horizontally */
+        max-width: 90%; /* Limit the width for better readability */
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%; /* Make inputs full-width */
+        margin-bottom: 15px; /* Add spacing between fields */
+    }
+
+    .contact-form button {
+        width: 100%; /* Make button full-width */
+        font-size: 1rem; /* Adjust button font size */
+    }
+}
+
 .contact-content h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 2rem;
@@ -867,5 +908,6 @@ footer .logo {
     footer {
         padding: 15px 10px; /* Add padding for better spacing */
         font-size: 0.8rem; /* Adjust font size */
+        text-align: center; /* Center-align text */
     }
 }
