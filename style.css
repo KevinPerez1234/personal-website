@@ -202,11 +202,6 @@ html, body {
     color: #333;
 }
 
-.interests {
-    display: flex;
-    position: relative;
-    justify-content: left;
-}
 
 /* Style for the interests photos */
 .interests-photos {
@@ -217,9 +212,12 @@ html, body {
 }
 
 .interest {
-    position: relative; /* Position container for label */
+    position: relative; /* Required for the label to position correctly */
     display: inline-block;
+    width: 180px; /* Match the image size */
+    height: 180px; /* Match the image size */
 }
+
 
 .interest img {
     width: 180px; /* Default size of the images */
@@ -287,6 +285,12 @@ html, body {
 
 /* Mobile adjustments for Interests Section */
 @media (max-width: 768px) {
+    .interest {
+        width: 120px; /* Match the reduced image size */
+        height: 120px; /* Match the reduced image size */
+    }
+
+
     .interest img {
         width: 120px; /* Reduce image size for mobile */
         height: 120px;
